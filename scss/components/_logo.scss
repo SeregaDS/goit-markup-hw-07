@@ -8,7 +8,18 @@
     color: $action_color;
   }
 
+  &__variable {
+    color: #000000;
+  }
+
   &__variable--footer {
     color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
