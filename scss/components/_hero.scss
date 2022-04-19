@@ -30,4 +30,7 @@
 
 .hero__button {
   @extend %button;
+  &:hover {
+    background-color: $hero-button-hover;
+  }
 }
