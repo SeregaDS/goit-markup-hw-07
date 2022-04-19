@@ -243,7 +243,7 @@ button {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 450px;
     padding-left: 15px;
@@ -289,6 +289,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .logo {
+    max-height: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -314,27 +315,27 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__item {
-  position: relative;
-}
-
 .nav__link--current {
   color: #2196f3;
 }
 
-.nav__link--current::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196f3;
-  position: absolute;
-  bottom: 0;
-}
-
 .nav__link:hover, .nav__link:focus {
   color: #2196f3;
+}
+
+.nav__link--current::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  display: block;
+  content: '';
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+
+.nav__item {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -379,12 +380,12 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact__icon {
-  fill: currentColor;
-}
-
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
+}
+
+.contact__icon {
+  fill: currentColor;
 }
 
 @media screen and (min-width: 768px) {
@@ -411,9 +412,6 @@ button {
 
 @media screen and (min-width: 1200px) {
   .contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -444,22 +442,20 @@ button {
 }
 
 .header::after {
-  content: '';
   position: absolute;
   bottom: 0;
   z-index: -1;
+  content: '';
   border-bottom: #ececec 1px solid;
   width: 100%;
 }
 
-@media screen and (min-width: 1200px) {
-  .header__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+  .contact {
+    display: none;
   }
 }
 
@@ -477,12 +473,25 @@ button {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .header__nav {
-    display: none;
+@media screen and (min-width: 1200px) {
+  .header__container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .contact {
-    display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,24 +1,23 @@
-.logo {
-  &__main {
-    text-decoration: none;
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    color: $action_color;
-  }
+.logo__main {
+  text-decoration: none;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $action_color;
+}
 
-  &__variable {
-    color: #000000;
-  }
+.logo__variable {
+  color: #000000;
 
-  &__variable--footer {
+  &--footer {
     color: #ffffff;
   }
 }
 
 @media screen and (max-width: 767px) {
   .logo {
+    max-height: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
