@@ -443,6 +443,13 @@ button {
   margin: -1px;
 }
 
+.promo {
+  font-size: 36px;
+  line-height: 1.17;
+  font-weight: bold;
+  text-align: center;
+}
+
 .logo__main {
   text-decoration: none;
   font-family: Raleway;
@@ -670,6 +677,7 @@ button {
   }
   .section--promo {
     display: block;
+    padding-top: 0;
   }
 }
 
@@ -838,5 +846,48 @@ button {
   .advantage__item:not(:nth-child(4n + 4)) {
     margin-right: 30px;
   }
+}
+
+.promo {
+  margin-bottom: 50px;
+}
+
+.promo__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.promo__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.promo__image {
+  position: relative;
+}
+
+.promo__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.promo__overlay-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
