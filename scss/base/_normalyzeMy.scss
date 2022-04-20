@@ -2,13 +2,15 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  /* user-select: none; */
-  /* caret-color: transparent; */
-}
+// !!! При подключении этих стилей ломает верстку
+// !!! Margin-left and -right: auto становится 15
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+//   // user-select: none;
+//   //  caret-color: transparent;
+// }
 
 h1,
 h2,
@@ -19,13 +21,11 @@ h6,
 p,
 ul,
 ol,
-li,
-link {
+li {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   list-style: none;
   text-decoration: none;
@@ -33,7 +33,7 @@ link {
 
 body {
   font-family: roboto, sans-serif;
-  background-color: #ffffff;
+  background-color: $bgc-main;
   color: $main-text-color;
   letter-spacing: 0.03em;
 }
