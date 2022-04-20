@@ -443,8 +443,8 @@ button {
   margin: -1px;
 }
 
-.promo {
-  font-size: 36px;
+.promo, .team {
+  font-size: 28px;
   line-height: 1.17;
   font-weight: bold;
   text-align: center;
@@ -670,6 +670,10 @@ button {
   display: none;
 }
 
+.section--team {
+  background-color: #f5f4fa;
+}
+
 @media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
@@ -850,6 +854,7 @@ button {
 
 .promo {
   margin-bottom: 50px;
+  font-weight: 36px;
 }
 
 .promo__list {

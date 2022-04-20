@@ -247,7 +247,7 @@
 
       <!--Команда-->
 
-      <section class="section">
+      <section class="section section--team">
         <div class="container">
           <h2 class="team">Наша команда</h2>
           <ul class="team__list">
@@ -255,12 +255,21 @@
 
             <li class="team__profile">
               <div class="team__badge">
-                <img
-                  src="./images/a1.jpg"
-                  alt="фото дизайнера Игоря Демьяненко"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./images/1igor1/m.jpg 1x, ./images/1igor1/mx2.jpg 2x"
+                    type="img/jpg"
+                    media="(max-width: 767px)" />
+                  <source
+                    srcset="./images/1igor1/t.jpg 1x, ./images/1igor1/tx2.jpg 2x"
+                    type="img/jpg"
+                    media="(max-width: 1199px)" />
+                  <source
+                    srcset="./images/1igor1/d.jpg 1x, ./images/1igor1/dx2.jpg 2x"
+                    type="img/jpg"
+                    media="(min-width: 1200px)" />
+                  <img src="./images/a1.jpg" alt="фото дизайнера Игоря Демьяненко"
+                /></picture>
               </div>
               <div class="team__meta">
                 <h3 class="team__member">Игорь Демьяненко</h3>

@@ -4,6 +4,10 @@
   &--promo {
     display: none;
   }
+
+  &--team {
+    background-color: $bgc-secondary;
+  }
 }
 
 @media screen and (min-width: 1200px) {
