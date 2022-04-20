@@ -1,5 +1,8 @@
 .section {
   display: block;
+  &--promo {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -13,5 +16,9 @@
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    &--promo {
+      display: block;
+    }
   }
 }

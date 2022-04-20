@@ -7,10 +7,17 @@
   height: 400px;
   background-color: $bgc-hero;
   background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero-bg.jpg');
+    url('../images/hero-bg-mob.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero-bg-mob@x2.jpg');
+  }
 }
 
 .hero__title {
