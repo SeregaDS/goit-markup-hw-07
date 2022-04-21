@@ -16,6 +16,11 @@
   justify-content: center;
   align-items: center;
   transition: $typical-transition-background, $typical-transition-color;
+  &--footer {
+    color: $text-white-color;
+    background-color: $bgc-icon-footer;
+  }
+
   &:hover,
   &:focus {
     background-color: $action-color;

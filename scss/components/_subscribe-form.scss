@@ -1,0 +1,70 @@
+.subscribe__form {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+}
+
+// .subscribe__label {
+//   margin-right: 12px;
+// }
+
+// .subscribe__mail {
+//   position: absolute;
+//   left: 16px;
+//   top: 15px;
+//   font-size: 16px;
+//   line-height: 1.25;
+//   color: rgba(255, 255, 255, 0.6);
+//   transform: translateY(0) translateX(0) scale(1);
+//   transition: transform 250ms var(--typical-cubic);
+// }
+
+// .subscribe__input {
+//   width: 358px;
+//   height: 50px;
+//   padding: 15px 16px;
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//   border-radius: 4px;
+//   outline: none;
+//   background-color: transparent;
+
+//   color: rgba(255, 255, 255, 0.9);
+// }
+
+// .subscribe__input:focus + .subscribe__mail,
+// .subscribe__input:not(:placeholder-shown) + .subscribe__mail {
+//   transform: translateY(-178%) translateX(-40%) scale(0.8);
+// }
+
+// .btn-subscribe {
+//   width: 200px;
+//   height: 50px;
+//   font-size: 16px;
+//   line-height: 1.87;
+//   cursor: pointer;
+//   background-color: var(--action-color);
+//   letter-spacing: 0.06em;
+//   font-weight: 700;
+//   color: var(--text-white-color);
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: block;
+//   padding: 0;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   border-radius: 4px;
+//   border-width: 0;
+//   transition: var(--typical-transition-background);
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .btn-subscribe:hover,
+// .btn-subscribe:focus {
+//   background-color: var(--hero-button-hover);
+// }
+
+// .subscribebtn-icon {
+//   margin-left: 10px;
+// }

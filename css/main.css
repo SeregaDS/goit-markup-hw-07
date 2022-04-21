@@ -454,7 +454,7 @@ button {
   text-decoration: none;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   color: #2196f3;
 }
@@ -469,9 +469,14 @@ button {
 
 @media screen and (max-width: 767px) {
   .logo {
-    max-height: 60px;
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+  .logo--footer {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -952,6 +957,11 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social__link--footer {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .social__link:hover, .social__link:focus {
   background-color: #2196f3;
   color: #ffffff;
@@ -1079,5 +1089,61 @@ button {
   .clients__card:not(:nth-child(6n + 6)) {
     margin-right: 30px;
   }
+}
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__wrapper--first {
+  margin-bottom: 60px;
+}
+
+.footer__wrapper--second {
+  margin-bottom: 60px;
+}
+
+.footer__adress {
+  font-size: 14px;
+  line-height: 1.46;
+  text-align: center;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.adress__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.adress__link--map {
+  color: #ffffff;
+}
+
+.footer__join-text {
+  margin-bottom: 20px;
+  display: block;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: center;
+}
+
+.subscribe__form {
+  position: relative;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
