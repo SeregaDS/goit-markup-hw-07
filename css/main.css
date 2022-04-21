@@ -443,7 +443,7 @@ button {
   margin: -1px;
 }
 
-.promo, .team {
+.promo, .team, .clients {
   font-size: 28px;
   line-height: 1.17;
   font-weight: bold;
@@ -819,9 +819,6 @@ button {
   .advantage__item {
     width: calc((100% - 2 * 30px) / 2);
   }
-  .advantage__item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
   .advantage__item:nth-child(odd) {
     margin-right: 30px;
   }
@@ -831,21 +828,8 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-  .advantage__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-right: -30px;
-    margin-bottom: -30px;
-  }
   .advantage__item {
     width: calc((100% - 4 * 30px) / 4);
-  }
-  .advantage__item:nth-last-child(-n + 4) {
-    margin-bottom: 0;
   }
   .advantage__item:not(:nth-child(4n + 4)) {
     margin-right: 30px;
@@ -854,7 +838,7 @@ button {
 
 .promo {
   margin-bottom: 50px;
-  font-weight: 36px;
+  font-size: 36px;
 }
 
 .promo__list {
@@ -896,16 +880,24 @@ button {
   color: #ffffff;
 }
 
+.team {
+  margin-bottom: 30px;
+}
+
 .team__profile {
-  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team__profile:last-child {
+  margin-bottom: 0;
+}
+
 .team__badge {
-  max-width: 450px;
+  max-width: 100%;
 }
 
 .team__meta {
@@ -982,36 +974,110 @@ button {
   .team__profile {
     width: calc((100% - 2 * 30px) / 2);
   }
-  .team__profile:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
   .team__profile:nth-child(odd) {
     margin-right: 30px;
+  }
+  .team__profile:last-child {
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .team__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-right: -30px;
-    margin-bottom: -30px;
+  .team {
+    margin-bottom: 50px;
+    font-size: 36px;
   }
   .team__profile {
     width: calc((100% - 4 * 30px) / 4);
-  }
-  .team__profile:nth-last-child(-n + 4) {
-    margin-bottom: 0;
   }
   .team__profile:not(:nth-child(4n + 4)) {
     margin-right: 30px;
   }
   .team__meta {
     padding-bottom: 30px;
+  }
+}
+
+.clients {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: -30px;
+}
+
+.clients__card {
+  width: calc((100% - 2 * 30px) / 2);
+  height: 92px;
+  margin-bottom: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.clients__card:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  color: #afb1b8;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__link:hover, .clients__link:focus {
+  color: #2196f3;
+  border-color: #2196f3;
+}
+
+.clients__icon-link {
+  fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__card {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+  .clients__card:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+  .clients__card:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  .clients__card {
+    width: calc((100% - 6 * 30px) / 6);
+  }
+  .clients__card:not(:nth-child(6n + 6)) {
+    margin-right: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */
