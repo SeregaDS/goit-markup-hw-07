@@ -51,10 +51,6 @@
   border-bottom: 1px solid $bgc-item-hover;
   border-left: 1px solid $bgc-item-hover;
   border-right: 1px solid $bgc-item-hover;
-
-  // border-bottom: 1px solid red;
-  // border-left: 1px solid red;
-  // border-right: 1px solid red;
 }
 
 .cases__card {
@@ -122,6 +118,10 @@
     padding-bottom: 56px;
   }
 
+  .buttons {
+    justify-content: center;
+  }
+
   .cases {
     flex-direction: row;
     flex-wrap: wrap;
@@ -135,9 +135,6 @@
     margin-bottom: 30px;
     display: flex;
     align-items: stretch;
-  }
-  .cases__meta {
-    max-height: 100px;
   }
 }
 

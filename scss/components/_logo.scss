@@ -34,3 +34,9 @@
     }
   }
 }
+
+@media screen and (min-width: $min-w-tablet) {
+  .logo__main {
+    font-size: 26px;
+  }
+}

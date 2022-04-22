@@ -135,16 +135,16 @@
     position: relative;
     z-index: 2;
   }
-  .cases__meta {
-    // height: 100%;
-  }
+  // .cases__meta {
+  //   height: 100%;
+  // }
 
   .cases__card {
-    // position: relative;
+    position: relative;
 
-    // border-bottom: 1px solid red;
-    // border-left: 1px solid red;
-    // border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
   }
 }
 
