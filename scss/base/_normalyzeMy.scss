@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  user-select: none;
 }
 
 // !!! При подключении этих стилей ломает верстку
@@ -8,7 +9,7 @@ html {
 // *::before,
 // *::after {
 //   box-sizing: inherit;
-//   // user-select: none;
+// user-select: none;
 //   //  caret-color: transparent;
 // }
 

@@ -345,6 +345,10 @@ template {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1,
@@ -716,9 +720,8 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
-  padding-bottom: 0;
-  max-width: 767px;
-  height: 400px;
+  padding-bottom: 118px;
+  max-width: 480px;
   background-color: #2f303a;
   background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/hero-bg-mob.jpg");
   background-repeat: no-repeat;
@@ -753,7 +756,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 1199px;
+    max-width: 849px;
     background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/hero-bg-tab.jpg");
   }
 }
@@ -771,12 +774,32 @@ button {
   }
 }
 
+@media screen and (min-width: 850px) {
+  .hero {
+    max-width: 1199px;
+    background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/hero-bg-desk.jpg");
+  }
+}
+
+@media screen and (min-width: 850px) and (min-device-pixel-ratio: 2), screen and (min-width: 850px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 850px) and (min-resolution: 192dpi), screen and (min-width: 850px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/hero-bg-desk@x2.jpg");
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     background-image: linear-gradient(359deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/hero-bg-desk.jpg");
     padding-top: 200px;
-    height: 600px;
+    padding-bottom: 200px;
   }
 }
 
@@ -1541,6 +1564,13 @@ button {
           transform: scale(1.9);
 }
 
+@media screen and (min-width: 768px) {
+  .backdrop.is-hidden .modal {
+    -webkit-transform: translate(-50%, -50%) scale(1.9);
+            transform: translate(-50%, -50%) scale(1.9);
+  }
+}
+
 .modal-open {
   overflow: hidden;
 }
@@ -1596,6 +1626,33 @@ button {
   fill: #2196f3;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    top: 93px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    min-width: 450px;
+    max-width: 527px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    width: 528px;
+  }
 }
 
 .join-form {

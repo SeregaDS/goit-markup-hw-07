@@ -26,3 +26,11 @@
     transform: scale(1.9);
   }
 }
+
+@media screen and (min-width: $min-w-tablet) {
+  .backdrop.is-hidden {
+    & .modal {
+      transform: translate(-50%, -50%) scale(1.9);
+    }
+  }
+}
