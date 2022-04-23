@@ -24,6 +24,24 @@
     color: $action-color;
     cursor: pointer;
   }
+
+  &:hover .join-form__input,
+  &:hover .join-form__inputtext {
+    border-color: $action-color;
+    cursor: pointer;
+  }
+
+  &:not(:nth-child(5)) {
+    margin-bottom: 10px;
+  }
+
+  &:hover .join-form__name {
+    color: $action-color;
+  }
+
+  &:hover .join-form__icon {
+    fill: $action-color;
+  }
 }
 
 .join-form__name {
@@ -34,68 +52,37 @@
   letter-spacing: 0.01em;
 }
 
-.join-form__label:hover .join-form__input,
-.join-form__label:hover .join-form__inputtext {
-  border-color: $action-color;
-  cursor: pointer;
-}
-
-.join-form__label:hover .join-form__icon {
-  fill: $action-color;
-}
-
-.join-form__label:hover .join-form__name {
-  color: $action-color;
-}
-
-.join-form__label:not(:nth-child(5)) {
-  margin-bottom: 10px;
-}
-
 .join-form__input {
   flex-grow: 1;
   max-height: 40px;
   padding: 11px 12px 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
 
-.join-form__input:focus ~ .join-form__icon {
-  fill: $action-color;
-}
+  &:focus ~ .join-form__icon {
+    fill: $action-color;
+  }
 
-.join-form__input:focus ~ .join-form__name {
-  color: $action-color;
-}
+  &:focus ~ .join-form__name {
+    color: $action-color;
+  }
 
-.join-form__input:not(:placeholder-shown) {
-  border: 1px solid $action-color;
-}
+  &:not(:placeholder-shown) {
+    border: 1px solid $action-color;
+  }
 
-.join-form__input:not(:placeholder-shown) + .join-form__icon {
-  fill: $action-color;
-}
+  &:not(:placeholder-shown) + .join-form__icon {
+    fill: $action-color;
+  }
 
-.join-form__input:not(:placeholder-shown) ~ .join-form__name {
-  color: $action-color;
-}
+  &:not(:placeholder-shown) ~ .join-form__name {
+    color: $action-color;
+  }
 
-.join-form__input:focus,
-.join-form__inputtext:focus {
-  border: 1px solid $action-color;
-  outline: none;
-}
-
-.join-form__inputtext:not(:placeholder-shown) {
-  border: 1px solid $action-color;
-}
-
-.join-form__inputtext:focus ~ .join-form__name {
-  color: $action-color;
-}
-
-.join-form__inputtext:not(:placeholder-shown) ~ .join-form__name {
-  color: $action-color;
+  &:focus {
+    border: 1px solid $action-color;
+    outline: none;
+  }
 }
 
 .join-form__inputtext {
@@ -109,13 +96,30 @@
   padding-bottom: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
 
-.join-form__inputtext::placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &:focus {
+    border: 1px solid $action-color;
+    outline: none;
+  }
+
+  &:not(:placeholder-shown) {
+    border: 1px solid $action-color;
+  }
+
+  &:focus ~ .join-form__name {
+    color: $action-color;
+  }
+
+  &:not(:placeholder-shown) ~ .join-form__name {
+    color: $action-color;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .join-form__icon {
@@ -131,57 +135,60 @@
   position: relative;
 }
 
-.join-form__checkboxchecked {
-  position: absolute;
-  left: 12px;
-  top: 4px;
-  opacity: 0;
-  transform: scale(0.1) rotate(1turn);
-  width: 16px;
-  height: 15px;
-}
-
 .join-form__checkbox {
   position: absolute;
-  fill: currentColor;
   left: 12px;
   top: 4px;
-  opacity: 1;
+
   width: 16px;
   height: 15px;
+
+  opacity: 1;
+
+  fill: currentColor;
 
   transition: opacity 250ms $typical-cubic;
 }
 
-.join-form__checkboxhidden:focus ~ .join-form__checkbox {
-  outline: 2px solid $action-color;
-  border-radius: 2px;
-  box-shadow: 1px -1px 0px 0px $action-color inset, -1px 1px 0px 0px $action-color inset;
-}
-
-.join-form__checkboxhidden:focus ~ .join-form__checkboxchecked {
-  outline: 2px solid $main-text-color;
-  border-radius: 2px;
-  box-shadow: 1px -1px 0px 0px $main-text-color inset, -1px 1px 0px 0px $main-text-color inset;
-}
-
-.join-form__checkboxhidden:checked ~ .join-form__checkbox {
+.join-form__checkboxchecked {
   position: absolute;
   left: 12px;
+  top: 4px;
+  width: 16px;
+  height: 15px;
   opacity: 0;
-  fill: white;
-}
-
-.join-form__checkboxhidden:checked ~ .join-form__checkboxchecked {
-  position: absolute;
-  opacity: 1;
-
-  transform: scale(1) rotate(0deg);
+  transform: scale(0.1) rotate(1turn);
   transition: opacity 250ms $typical-cubic, transform 250ms $typical-cubic;
 }
 
 .join-form__checkboxhidden {
   @extend %visually-hidden;
+
+  &:focus ~ .join-form__checkbox {
+    outline: 3px solid $action-color;
+    border-radius: 2px;
+    box-shadow: 1px -1px 0px 0px $action-color inset, -1px 1px 0px 0px $action-color inset;
+  }
+
+  &:focus ~ .join-form__checkboxchecked {
+    outline: 3px solid $main-text-color;
+    border-radius: 2px;
+    box-shadow: 1px -1px 0px 0px $main-text-color inset, -1px 1px 0px 0px $main-text-color inset;
+  }
+
+  &:checked ~ .join-form__checkbox {
+    position: absolute;
+    left: 12px;
+    opacity: 0;
+    fill: white;
+  }
+
+  &:checked ~ .join-form__checkboxchecked {
+    position: absolute;
+    opacity: 1;
+
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .join-form__offer {

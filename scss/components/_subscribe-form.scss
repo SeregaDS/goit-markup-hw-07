@@ -32,23 +32,22 @@
   border-radius: 4px;
   outline: none;
   background-color: transparent;
-
   color: rgba(255, 255, 255, 0.9);
-}
 
-.subscribe__input:focus + .subscribe__fake-placeholder,
-.subscribe__input:not(:placeholder-shown) + .subscribe__fake-placeholder {
-  transform: translateY(-178%) translateX(-40%) scale(0.8);
+  &:focus + .subscribe__fake-placeholder,
+  &:not(:placeholder-shown) + .subscribe__fake-placeholder {
+    transform: translateY(-178%) translateX(-40%) scale(0.8);
+  }
 }
 
 .subscribe__button {
   @extend %button;
   margin-top: 20px;
-}
 
-.subscribe__button:hover,
-.subscribe__button:focus {
-  background-color: $hero-button-hover;
+  &:hover,
+  &:focus {
+    background-color: $hero-button-hover;
+  }
 }
 
 .subscribe__btn-icon {

@@ -39,7 +39,7 @@
   line-height: 1.71;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $min-w-tablet) {
   .advantage__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -59,7 +59,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $min-w-desktop) {
   .advantage__item {
     width: calc((100% - 4 * 30px) / 4);
 

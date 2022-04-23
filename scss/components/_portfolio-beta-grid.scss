@@ -58,10 +58,6 @@
   box-shadow: none;
   transition: $typical-transition-boxshadow;
 
-  //   border-bottom: 1px solid $bgc-item-hover;
-  //   border-left: 1px solid $bgc-item-hover;
-  //   border-right: 1px solid $bgc-item-hover;
-
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -147,78 +143,3 @@
     border-right: 1px solid red;
   }
 }
-
-// .cases-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-left: -30px;
-//   margin-bottom: -30px;
-// }
-
-// .cases-item {
-//   flex-basis: calc(100% / 3 - 30px);
-
-//   margin-left: 30px;
-//   margin-bottom: 30px;
-// }
-
-// .cases-card .cases-item-title {
-//   font-size: 18px;
-//   font-weight: 700;
-//   line-height: 2;
-//   letter-spacing: 0.06em;
-//   color: $main-text-color;
-// }
-
-// .cases-item-text {
-//   font-size: 16px;
-//   color: $secondary-text-color;
-// }
-
-// .cases-card {
-//   display: block;
-//   text-decoration: none;
-//   box-shadow: none;
-//   transition: $typical-transition-boxshadow;
-// }
-
-// .cases-card:hover,
-// .cases-card:focus {
-//   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-//     1px 4px 6px rgba(0, 0, 0, 0.16);
-// }
-
-// .cases-content {
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-//   padding-left: 24px;
-//   padding-right: 24px;
-
-//   border-bottom: 1px solid $bgc-item-hover;
-//   border-left: 1px solid $bgc-item-hover;
-//   border-right: 1px solid $bgc-item-hover;
-// }
-
-// .cases-image .cases-overlay {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   padding-left: 24px;
-//   padding-right: 24px;
-//   display: flex;
-//   align-items: center;
-//   background-color: $cases-overlay-bgc;
-//   transform: translateY(0);
-//   transition: transform 250ms $typical-cubic;
-// }
-
-// .cases-card:focus .cases-overlay,
-// .cases-card:hover .cases-overlay {
-//   transform: translateY(-100%);
-// }
-
-// .cases-image .overlay-text {
-//   font-size: 18px;
-//   line-height: 1.56;
-//   color: $text-white-color;
-// }
